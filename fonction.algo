@@ -1,0 +1,20 @@
+ALGORITHM orth_vectors
+VAR
+    ta1,ta2 : ARRAY_OF INTEGER [50];
+    dot : INTEGER;
+BEGIN
+    
+    n1 := read_size();
+    
+    read_array(n1,ta1);
+    
+    n2 := read_size();
+    
+    read_array(n2,ta2);
+    dot_product(ta1,ta2,dot);
+    IF (dot = 0) THEN
+        Write("ta1 and a2 are orthogonal");
+    ELSE
+        Write("ta1 and ta2 are not orthogonal");
+    END_IF
+END

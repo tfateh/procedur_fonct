@@ -1,0 +1,16 @@
+ALGORITHM orth_vectors
+VAR
+    tab1,tab2 : ARRAY_OF INTEGER [50];
+    dot : INTEGER;
+BEGIN
+    n1 := read_size();
+    read_array(n1,tab1);
+    n2 := read_size();
+    read_array(n2,tab2);
+    dot_product(tab1,tab2,dot);
+    IF (dot = 0) THEN
+        Write("tab1 and tab2 are orthogonal");
+    ELSE
+        Write("tab1 and tab2 are not orthogonal");
+    END_IF
+END
